@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta charSet="utf-8" />
     <title>Plateau Driving School</title>
+    <meta name="description" content="Driving school operated in Lower Mainland, BC that aims to provide a better defensive driving.">
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="Plateau Driving School" />
+    <meta name="og:description" content="Driving school operated in Lower Mainland, BC that aims to provide a better defensive driving." />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3d6adec820.js" crossorigin="anonymous"></script>
-    <script>window.onscroll = function() {scrollFunction()};
-      function scrollFunction() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-          document.getElementById("navigation-bar").classList.add("scrollNav");
-        } else {
-          document.getElementById("navigation-bar").classList.remove("scrollNav");
+    <script>
+      window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+            document.getElementById("navigation-bar").classList.add("scrollNav");
+          } else {
+            document.getElementById("navigation-bar").classList.remove("scrollNav");
+          }
         }
-      }
-      function mobilemenu() {
-        document.getElementById("hamburger").classList.toggle("burgermode");
-        document.getElementById("header").classList.toggle("burgermode");
-      }
+        function mobilemenu() {
+          document.getElementById("hamburger").classList.toggle("burgermode");
+          document.getElementById("header").classList.toggle("burgermode");
+        }
     </script>
   </head>
   <body>
@@ -52,8 +57,7 @@
           <img src="images/plateau-driving-school_title.svg" alt="Title">
         </div>
         <div class="subtitle">
-          <h4>Be a better defensive driver.<br/>
-            Convenience in your lesson</h4>
+          <h4>Be a better defensive driver.<br/></h4>
         </div>
         <a href="#pricing"><button type="button" class="calltoaction" name="button">BOOK NOW</button></a>
       </div>
@@ -62,7 +66,7 @@
       <article class="description">
         <h2>About Us</h2>
         <p>Plateau Driving School mainly operates in
-Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons in Class 7 and 5 driver's licenses. Our packages are for first time and refreshers. </p>
+Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons in Class 7 and 5 driver's licenses. Our packages are for first time and refreshers.</p>
       </article>
     </section>
     <section id="feature">
@@ -153,14 +157,63 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
         </article>
       </div>
       <div class="book-text">
-        <button type="button" class="calltoaction" name="button">START YOUR LESSON</button>
-        <p>Not sure of our deals?<strong><a href="mailto:timimintu@gmail.com"/>Request a quote</a></strong></p>
+        <button type="button" class="calltoaction" name="button"><a href="tel:778-223-1457" target="blank"/>BOOK YOUR LESSON NOW</a></button>
+        <p>Not sure of our deals?<strong><a href="mailto:plateaudriving@gmail.com"/>Request a quote</a></strong></p>
       </div>
     </section>
+
+
+
     <section id="review">
-      <h4><em>"Attending flexible lessons from Plateaux Driving School not only help me build my confidence in driving but also help me in my personal goal".</em></h4>
-      <p>-Tina Jackson, House Wife</p>
+      <h2 class="headlinetitle">Our Testimonials</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <p>"Timi was a great instructorwho taught and explained things to me very clearly and was always ready to answer my very many (never ending) questions with enthusiasm and humour. Our driving sessions were always enjoyable and he is very friendly and easy to talk to as well. I'm gonna miss our lessons!"</p>
+          <p><strong>-Shirin Forouzan</strong></p>
+        </div>
+        <div class="mySlides fade">
+          <p>"I recently passed my road exam and greatly appreciate Timi's support for the success. Timi is a very friendly, patient and assuring instructor. I had 3 different instructors in the past and was never as comfortable as I drove with Timi. Driving intimidated me badly at the beginning, but Timi assured me that I would be okay, and now I am comfortable with my driving! I highly recommend learning how to drive from Timi."</p>
+          <p><strong>-Hidemi Kyotani</strong></p>
+        </div>
+        <div class="mySlides fade">
+          <p>"It has been a pleasure learning with Timi. He has effectively instructed/helped with the areas for improvement, we would practice about once a week until I passed the test! Even after the exam I still practice with him driving in different areas (Burnaby, Coquitlam, Surrey, etc). Big thumbs up!"</p>
+          <p><strong>-Merielle Alano</strong></p>
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+      </script>
     </section>
+
+
+
+
     <section id="contact">
       <h2 class="headlinetitle">Contact us</h2>
       <div class="contact-container">
@@ -189,7 +242,7 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
             </div>
             <div class="contact-link">
               <i class="fas fa-envelope"></i>
-              <p><a href="mailto:timimintu@gmail.com" target="_blank">timimintu@gmail.com</a></p>
+              <p><a href="mailto:plateaudriving@gmail.com" target="_blank">plateaudriving@gmail.com</a></p>
             </div>
             </div>
           <!--
@@ -208,7 +261,7 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
         <img src="images/plateau-driving-school_logo.svg" alt="Logo">
         <img src="images/plateau-driving-school_title.svg" alt="Title">
       </div>
-      <p>Copyright <a href="#">Ryn Design</a>, 2020<br/>All Rights Reserved</p>
+      <p>Copyright <a href="http://ryn.design" target="_blank">Ryn Design</a>, 2020<br/>All Rights Reserved</p>
     </footer>
   </body>
 </html>

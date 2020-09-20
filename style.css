@@ -91,6 +91,7 @@ body{
   display: flex;
   flex-direction: column;
   height: 72px;
+  z-index: 9999;
 }
 
 #navigation-bar{
@@ -209,7 +210,7 @@ margin-left: 10%;
 }
 
 .hero-image{
-  background: url('https://i.imgur.com/SgxZgdN.png');
+  background: url('https://i.imgur.com/AgNxFgS.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -379,6 +380,7 @@ section{
   background-repeat: no-repeat;
   text-align: center;
   color: white;
+  height: 500px;
 }
 
 #review h4{
@@ -501,6 +503,51 @@ footer a{
   text-decoration: none;
 }
 
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-right: 0%;
+  margin-left: 0%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: var(--clr-cyan);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 @media only screen and (min-width: 600px){
   .nav-links{
     list-style-type: none;
@@ -525,6 +572,11 @@ footer a{
   footer{
     justify-content: space-between;
     text-align: right;
+  }
+
+  .slideshow-container {
+    margin-right: 15%;
+    margin-left: 15%;
   }
 
 }
