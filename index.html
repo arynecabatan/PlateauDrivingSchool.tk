@@ -67,7 +67,7 @@
       <article class="description">
         <h2>About Us</h2>
         <p>Plateau Driving School mainly operates in
-Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons in Class 7 and 5 driver's licenses. Our packages are for first time and refreshers.</p>
+Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons in Class 7 and 5 driver's licences. Our packages are for first time and refreshers.</p>
       </article>
     </section>
     <section id="feature">
@@ -76,13 +76,15 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
         <div class="feature-item">
           <img src="images/location.svg" alt="LowerMainland">
           <h4>Operates anywhere in Lower Mainland</h4>
-          <p>Metro Vancouver, Tri-Cities, Surrey, Pitt Meadows, Maple Ridge, you name it!</p>
+          <p>Metro Vancouver, Tri-Cities, Surrey, Pitt Meadows, Maple Ridge</p>
         </div>
+        <!--
         <div class="feature-item">
           <img src="images/language.svg" alt="LowerMainland">
           <h4>Support numbers of languages</h4>
           <p>English, Korean, German, Dutch, Swiss, Filipino and Mandarin</p>
         </div>
+      -->
         <div class="feature-item">
           <img src="images/piggy.svg" alt="LowerMainland">
           <h4>Budget-friendly service</h4>
@@ -91,7 +93,7 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
         <div class="feature-item">
           <img src="images/schedule.svg" alt="LowerMainland">
           <h4>Flexible Schedule</h4>
-          <p>Time and schedule constraint? Don't fret, we at Plateau Driving School offers custom testimonies.</p>
+          <p>Time and schedule constraint? Don't fret, we at Plateau Driving School offers flexible schedule.</p>
         </div>
       </div>
     </section>
@@ -110,7 +112,7 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
             <p>$55/hr</p>
           </div>
           <ul>
-            <li>Minimum of 2 hours session for better grasp on you driving lessons</li>
+            <li>Minimum of 2 hours session for better grasp on your driving lessons</li>
             <li>Automatic transmission vehicle will be used in every lesson</li>
             <li>Learn driving at your own pace</li>
           </ul>
@@ -132,29 +134,32 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
           </ul>
         </article>
         <article class="card-price">
-          <h4>Package plan</h4>
+          <h4>Package Plan</h4>
           <div class="card-price-details">
             <p><span>Tri-Cities</span></p>
           </div>
+          <ul class="rynpack">
+            <li>5+ driving sessions*</li>
+            <li>$45/hr</li>
+          </ul>
+          <ul class="rynpack">
+            <li>Road test & warm up</li>
+            <li>$100</li>
+          </ul>
           <div class="card-price-details">
-            <p>5+ driving sessions</p>
-            <p>$45/hr</p>
-          </div>
-          <div class="card-price-details">
-            <p>Road test & warm up</p>
-            <p>$100</p>
-          </div>
-          <div class="card-price-details negaspace">
             <p><span>Outside Tri-Cities</span></p>
           </div>
-          <div class="card-price-details">
-            <p>5+ driving sessions</p>
-            <p>$50/hr</p>
-          </div>
-          <div class="card-price-details">
-            <p>Road test & warm up</p>
-            <p>$110</p>
-          </div>
+          <ul class="rynpack">
+            <li>5+ driving sessions*</li>
+            <li>$50/hr</li>
+          </ul>
+          <ul class="rynpack">
+            <li>Road test & warm up</li>
+            <li>$110</li>
+          </ul>
+          <ul>
+            <li>*Our driving sessions are two hours each</li>
+          </ul>
         </article>
       </div>
       <div class="book-text">
@@ -162,9 +167,6 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
         <p>Not sure of our deals?<strong><a href="mailto:plateaudriving@gmail.com"/>Request a quote</a></strong></p>
       </div>
     </section>
-
-
-
     <section id="review">
       <h2 class="headlinetitle">Our Testimonials</h2>
       <div class="slideshow-container">
@@ -181,34 +183,45 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
           <p><strong>-Merielle Alano</strong></p>
         </div>
 
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
       </div>
       <br>
 
       <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
       <script>
-        var slideIndex = 0;
-        showSlides();
-        function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 6000); // Change image every 2 seconds
-        }
+      var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
       </script>
     </section>
 

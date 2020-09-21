@@ -280,12 +280,16 @@ section{
   text-align: center;
 }
 
+#feature{
+  text-align: center;
+}
+
 .feature-list{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
   align-content: center;
-  justify-content: center;
   grid-column-gap: 4%;
+
 }
 
 .feature-item{
@@ -337,7 +341,7 @@ section{
 }
 
 .card-price p{
-  line-height: 6px;
+  line-height: 3px;
 }
 
 .card-price span{
@@ -349,9 +353,6 @@ section{
   justify-content: space-between;
 }
 
-.negaspace{
-  margin-top: 12px;
-}
 
 .card-price ul{
   padding: 0;
@@ -360,7 +361,7 @@ section{
 .card-price li{
   font-size: var(--font-caption);
   list-style-type: none;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
   line-height: clamp(20px, 2.3vw, 24px);
 }
 
@@ -373,6 +374,12 @@ section{
   margin-top: 36px;
 }
 
+.rynpack{
+  display: flex;
+  justify-content: space-between;
+  margin:0;
+}
+
 #review{
   background: url('https://i.imgur.com/6KJzAz8.png');
   background-size: cover;
@@ -380,7 +387,7 @@ section{
   background-repeat: no-repeat;
   text-align: center;
   color: white;
-  height: 500px;
+  height: auto;
 }
 
 #review h4{
@@ -525,6 +532,43 @@ footer a{
   transition: background-color 0.6s ease;
 }
 
+
+.slideshow-container {
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  padding: 16px;
+  margin-top: -22px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -10%;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: -10%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
 .active {
   background-color: var(--clr-cyan);
 }
@@ -577,6 +621,12 @@ footer a{
   .slideshow-container {
     margin-right: 15%;
     margin-left: 15%;
+  }
+  .next {
+    right: -25%;
+  }
+  .prev {
+    left: -25%;
   }
 
 }
