@@ -132,7 +132,7 @@ body {
 }
 
 .mobile-nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   list-style-type: none;
   flex-grow: 1;
@@ -142,17 +142,15 @@ body {
   padding: 70% 0 100% 0;
   margin: 0;
   background: var(--clr-white);
-
   height: 0;
   overflow: hidden;
-  opacity: 0;
   transition: opacity 1s ease-out;
 }
 
 .burgermode .mobile-nav {
   height: 300px;
   overflow: hidden;
-  opacity: 1;
+  display: flex;
 }
 
 .burgermode #navigation-bar {
@@ -286,24 +284,6 @@ section {
   text-align: center;
 }
 
-#students {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Students-photos {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.Students-photos img {
-  max-height: 360px;
-  min-width: 33%;
-  object-fit: contain;
-  padding: 8px;
-}
-
 .headlinetitle {
   line-height: clamp(37px, 4.1vw, 41px);
   font-weight: 500;
@@ -343,6 +323,46 @@ section {
 .feature-item p {
   margin: 2% 0 0 0;
   padding-top: 2%;
+}
+
+.students-container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 2rem;
+  width: auto;
+  margin: 0;
+}
+
+.gallery-item {
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+  width: auto;
+  margin: 0;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slidebuttons {
+  margin: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.slidebuttons h4 a {
+  color: var(--clr-purple);
 }
 
 .card-list-price {
@@ -411,7 +431,7 @@ section {
 }
 
 #testimonials {
-  background: url("https://i.imgur.com/6KJzAz8.png");
+  background: url("/images/review.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -541,66 +561,14 @@ footer a {
   text-decoration: none;
 }
 
-.mySlides {
-  display: none;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  margin-right: 0%;
-  margin-left: 0%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 9px;
-  width: 9px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.slideshow-container {
-  position: relative;
-}
-
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
   top: 50%;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  color: black;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
   padding: 16px;
   margin-top: -22px;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: -10%;
-  border-radius: 3px 0 0 3px;
-}
-.prev {
-  left: -10%;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.active {
-  background-color: var(--clr-cyan);
 }
 
 /* Fading animation */
@@ -642,7 +610,10 @@ footer a {
     color: var(--clr-white);
   }
 
-  #hamburger,
+  #hamburger {
+    display: none;
+  }
+
   .mobile-nav {
     display: none;
   }
@@ -654,25 +625,5 @@ footer a {
   footer {
     justify-content: space-between;
     text-align: right;
-  }
-
-  .slideshow-container {
-    margin-right: 15%;
-    margin-left: 15%;
-  }
-  .next {
-    right: -25%;
-  }
-  .prev {
-    left: -25%;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 768px) {
-  .Students-photos img {
-    min-width: 100%;
-    max-height: 240px;
-    object-fit: contain;
-    padding: 4px;
   }
 }
