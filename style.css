@@ -148,7 +148,7 @@ body {
 }
 
 .burgermode .mobile-nav {
-  height: 300px;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
 }
