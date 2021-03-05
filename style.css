@@ -177,6 +177,31 @@ body {
   color: white;
 }
 
+.staticnav {
+  background-color: var(--clr-purple);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.staticlogo {
+  opacity: 1 !important;
+}
+
+.faqs-container {
+  margin: 0 clamp(20%, 60vw, 0%) 72px clamp(20%, 60vw, 0%);
+  text-align: center;
+}
+
+.faqs-container article {
+  margin-top: 10%;
+}
+
+.solid-divider {
+  margin: 10% 47% 0 47%;
+  border-top: 4px solid var(--clr-cyan);
+  border-radius: 5px;
+  border-bottom: none;
+}
+
 .nav-links li a {
   color: var(--clr-white);
   text-decoration: none;
