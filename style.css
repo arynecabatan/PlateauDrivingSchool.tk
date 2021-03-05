@@ -186,6 +186,10 @@ body {
   opacity: 1 !important;
 }
 
+#faqs {
+  margin-top: 90px;
+}
+
 .faqs-container {
   margin: 0 clamp(20%, 60vw, 0%) 72px clamp(20%, 60vw, 0%);
   text-align: center;
